@@ -108,7 +108,7 @@ header {
   letter-spacing: 0.01em;
 }
 
-.nav-item.active {
+.nav-item.active-nav {
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
 }
