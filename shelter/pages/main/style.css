@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -19,6 +23,10 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  text-align: center;
 }
 
 :root {
@@ -91,16 +99,16 @@ header {
   gap: 2.1875rem;
 }
 
-.nav-link {
+.nav-item {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6em;
   color: var(--color-dark-s);
-  padding-bottom: 0.3em;
+  /* padding-bottom: 0.3em; */
   letter-spacing: 0.01em;
 }
 
-.nav-link .active {
+.nav-item.active {
   color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
 }
