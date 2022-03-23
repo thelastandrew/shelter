@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'Georgia Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Regular'),
+    url('../../assets/fonts/georgia.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Arial Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Regular'),
+    url('../../assets/fonts/ARIAL.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Bold'),
+    url('../../assets/fonts/georgiab.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Arial Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Arial Italic'),
+    url('../../assets/fonts/ARIALI.woff') format('woff');
+}
+
 *,
 *::before,
 *::after {
@@ -11,7 +43,7 @@ html {
 }
 
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia Regular', serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -100,7 +132,7 @@ header {
 }
 
 .nav-item {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial Regular', sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6em;
   color: var(--color-dark-s);
