@@ -10,3 +10,11 @@ navItem.forEach((element) => {
     }
   });
 });
+
+// async function getPets() {
+//   const res = await fetch('pets.json');
+//   const data = await res.json();
+//   console.log(data);
+// }
+
+// getPets();
