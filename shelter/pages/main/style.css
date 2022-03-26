@@ -247,7 +247,8 @@ section .wrapper {
   background-color: var(--color-light-l);
 }
 
-.pets .section-heading {
+.pets .section-heading,
+.help .section-heading {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 3.75rem;
@@ -314,11 +315,29 @@ section .wrapper {
   margin-bottom: 1.875rem;
 }
 
-.pet-name {
+.pet-name,
+.option-name {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.15em;
   letter-spacing: 0.06em;
   text-align: center;
+}
+
+.pet-name {
   margin-bottom: 1.875rem;
+}
+
+.help-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.4375rem 7.5rem;
+}
+
+.option-pic {
+  display: block;
+  height: 3.75rem;
+  margin: 0 auto 1.875rem;
 }
