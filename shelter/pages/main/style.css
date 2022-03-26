@@ -91,7 +91,12 @@ header {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 2.5rem;
+}
+
+section .wrapper {
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
 }
 
 .header .wrapper {
@@ -158,6 +163,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .hero-content {
@@ -212,8 +219,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 7.5rem;
-  padding-top: 5rem;
-  padding-bottom: 6.25rem;
 }
 
 .about-info {
@@ -240,11 +245,6 @@ header {
 
 .pets {
   background-color: var(--color-light-l);
-}
-
-.pets .wrapper {
-  padding-top: 5rem;
-  padding-bottom: 6.25rem;
 }
 
 .pets .section-heading {
