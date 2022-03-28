@@ -235,8 +235,9 @@ section .wrapper {
 
 .section-heading {
   font-size: 2.1875rem;
+  font-weight: 400;
   line-height: 1.3em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-dark-l);
 }
 
@@ -333,6 +334,10 @@ section .wrapper {
   margin-bottom: 1.875rem;
 }
 
+.help .section-heading {
+  max-height: 5.625rem;
+}
+
 .help-options {
   display: flex;
   flex-direction: row;
@@ -361,6 +366,7 @@ section .wrapper {
 
 .donation-info {
   max-width: 23.75rem;
+  max-height: 17.626rem;
 }
 
 .donation .section-heading {
@@ -393,4 +399,82 @@ section .wrapper {
   font-size: 0.75rem;
   line-height: calc(18em / 12);
   color: var(--color-dark-m);
+}
+
+.footer {
+  background: var(--footer-gradient-background);
+}
+
+.footer .wrapper {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .section-heading {
+  color: var(--color-light-xl);
+}
+
+.footer .contacts,
+.footer .locations {
+  padding-top: 1rem;
+  padding-bottom: 3.75rem;
+}
+
+.contacts .section-heading {
+  margin-bottom: 2.5rem;
+}
+
+.footer li {
+  font-size: 1.25rem;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.footer li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.email {
+  padding: 3px 0 3px 32px;
+  margin-bottom: 2.5rem;
+}
+
+.tel {
+  padding: 5px 0 4px 22px;
+}
+
+.email::before {
+  content: url('../../assets/icons/mail.png');
+}
+
+.tel::before {
+  content: url('../../assets/icons/phone.png');
+}
+
+.locations {
+  min-width: 302px;
+}
+
+.locations li:nth-child(1) {
+  padding-left: 20px;
+  margin-bottom: 2rem;
+}
+
+.locations .section-heading {
+  margin-bottom: 2.125rem;
+}
+
+.locations li::before {
+  content: url('../../assets/icons/pin.png');
+}
+
+.locations li {
+  padding-left: 10px;
 }
