@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
 }
@@ -83,7 +87,7 @@ li {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 5rem 2.5rem 6.25rem;
 }
 
 .header {
@@ -154,4 +158,143 @@ li {
   width: 100%;
   height: 3px;
   background-color: var(--color-primary);
+}
+
+.main {
+  margin-top: 7.5rem;
+}
+
+.section-heading {
+  font-size: 2.1875rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+  text-align: center;
+  margin-bottom: 2.8125rem;
+}
+
+.pets {
+  background-color: var(--color-light-l);
+}
+
+.slider-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  padding: 15px 0;
+  margin-bottom: 45px;
+}
+
+.card {
+  width: 16.875rem;
+  background-color: var(--color-light-s);
+  border-radius: 0.5625rem;
+  padding-bottom: 1.875rem;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 15px var(--color-dark-3xl);
+}
+.pet-pic {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.875rem;
+}
+
+.pet-name,
+.option-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.pet-name {
+  margin-bottom: 1.875rem;
+}
+
+.pets .button {
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  font-family: 'Georgia Regular', serif;
+  font-size: 1.0625rem;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  padding: 0.9375rem 2.8125rem;
+  border: none;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background-color: var(--color-primary);
+}
+
+.transp-btn {
+  background-color: inherit;
+  outline: 2px solid var(--color-primary);
+}
+.button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.transp-btn:hover {
+  outline: 2px solid var(--color-primary-light);
+}
+
+.button:active {
+  background-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+}
+
+.slider-controls {
+  max-width: 21.25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle-btn {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  font-family: 'Georgia Regular';
+  font-size: 1.25rem;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  transition: 0.3s;
+}
+
+.circle-btn.inactive {
+  background-color: inherit;
+  color: var(--color-dark-s);
+  outline: 2px solid var(--color-dark-s);
+  border: none;
+}
+
+.circle-btn.active {
+  background-color: inherit;
+  color: var(--color-dark-3xl);
+  border: none;
+  outline: 2px solid var(--color-primary);
+}
+
+.circle-btn.page-num {
+  background-color: var(--color-primary);
+}
+
+.circle-btn.active:hover {
+  background-color: var(--color-primary-light);
+  outline: 2px solid var(--color-primary-light);
 }
