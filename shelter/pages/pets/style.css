@@ -87,7 +87,13 @@ li {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 5rem 2.5rem 6.25rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.pets .wrapper {
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
 }
 
 .header {
@@ -170,12 +176,15 @@ li {
   line-height: 1.3em;
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
-  text-align: center;
   margin-bottom: 2.8125rem;
 }
 
 .pets {
   background-color: var(--color-light-l);
+}
+
+.pets .section-heading {
+  text-align: center;
 }
 
 .slider-cards {
@@ -297,4 +306,82 @@ li {
 .circle-btn.active:hover {
   background-color: var(--color-primary-light);
   outline: 2px solid var(--color-primary-light);
+}
+
+.footer {
+  background: var(--footer-gradient-background);
+}
+
+.footer .wrapper {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .section-heading {
+  color: var(--color-light-xl);
+}
+
+.footer .contacts,
+.footer .locations {
+  padding-top: 1rem;
+  padding-bottom: 3.75rem;
+}
+
+.contacts .section-heading {
+  margin-bottom: 2.5rem;
+}
+
+.footer li {
+  font-size: 1.25rem;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.footer li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.email {
+  padding: 3px 0 3px 32px;
+  margin-bottom: 2.5rem;
+}
+
+.tel {
+  padding: 5px 0 4px 22px;
+}
+
+.email::before {
+  content: url('../../assets/icons/mail.png');
+}
+
+.tel::before {
+  content: url('../../assets/icons/phone.png');
+}
+
+.locations {
+  min-width: 302px;
+}
+
+.locations li:nth-child(1) {
+  padding-left: 20px;
+  margin-bottom: 2rem;
+}
+
+.locations .section-heading {
+  margin-bottom: 2.125rem;
+}
+
+.locations li::before {
+  content: url('../../assets/icons/pin.png');
+}
+
+.locations li {
+  padding-left: 10px;
 }
