@@ -217,6 +217,11 @@ section .wrapper {
   outline: 2px solid var(--color-primary-light);
 }
 
+.button:active {
+  background-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+}
+
 .about .wrapper {
   display: flex;
   flex-direction: row;
