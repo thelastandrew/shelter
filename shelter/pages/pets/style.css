@@ -317,6 +317,9 @@ li {
 
 .circle-btn.page-num {
   background-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  border: none;
+  cursor: auto;
 }
 
 .circle-btn.active:hover {
