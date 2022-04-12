@@ -189,7 +189,7 @@ section .wrapper {
   font-family: 'Arial Regular', sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6em;
-  color: var(--color-light-xl);
+  color: var(--color-dark-s);
   margin-bottom: 2.625rem;
 }
 
