@@ -3,6 +3,33 @@
 @import './resets';
 @import './modules';
 
+.header {
+  height: 11.25rem;
+  padding: 3.75rem 0;
+}
+
+.header-logo-title {
+  color: $color-primary;
+}
+
+.header-logo-subtitle {
+  color: $color-light-xl;
+}
+
+.nav-link {
+  color: $color-dark-s;
+
+  &:hover {
+    color: $color-light-s;
+  }
+}
+
+.active-nav {
+  .nav-link {
+    color: $color-light-s;
+  }
+}
+
 .start-screen {
   background: $start-screen-gradient-background;
 }

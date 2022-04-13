@@ -303,33 +303,30 @@ li {
 .circle-btn.inactive {
   background-color: inherit;
   color: var(--color-dark-s);
-  outline: 2px solid var(--color-dark-s);
-  border: none;
+  border: 2px solid var(--color-dark-s);
   cursor: auto;
 }
 
 .circle-btn.active {
   background-color: inherit;
   color: var(--color-dark-3xl);
-  border: none;
-  outline: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .circle-btn.page-num {
   background-color: var(--color-primary);
-  outline: 2px solid var(--color-primary);
-  border: none;
+  border: 2px solid var(--color-primary);
   cursor: auto;
 }
 
 .circle-btn.active:hover {
   background-color: var(--color-primary-light);
-  outline: 2px solid var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
 }
 
 .circle-btn.active:active {
   background-color: var(--color-primary);
-  outline: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .footer {

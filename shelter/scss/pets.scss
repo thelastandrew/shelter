@@ -1,0 +1,135 @@
+@import './fonts';
+@import './variables';
+@import './resets';
+@import './modules';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  .wrapper {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+}
+
+.header-logo-title {
+  color: $color-dark-l;
+}
+
+.header-logo-subtitle {
+  color: $color-dark-xl;
+}
+
+.nav-link {
+  color: $color-dark-l;
+
+  &:hover {
+    color: $color-dark-3xl;
+  }
+}
+
+.active-nav {
+  .nav-link {
+    color: $color-dark-3xl;
+  }
+}
+
+.pets {
+  .wrapper {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+.main {
+  margin-top: 7.5rem;
+}
+
+.section-heading {
+  font-size: 2.1875rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  margin-bottom: 2.8125rem;
+}
+
+.pets {
+  background-color: $color-light-l;
+
+  .section-heading {
+    text-align: center;
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+}
+
+.slider-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  padding: 15px 0;
+  margin-bottom: 45px;
+}
+
+.pet-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+.slider-controls {
+  max-width: 21.25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle-btn {
+  font-family: 'Georgia Regular';
+  font-size: 1.25rem;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  transition: 0.3s;
+
+  &.inactive {
+    background-color: inherit;
+    color: $color-dark-s;
+    border: 2px solid $color-dark-s;
+    cursor: auto;
+  }
+
+  &.active {
+    background-color: inherit;
+    color: $color-dark-3xl;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
+
+    &:active {
+      background-color: $color-primary;
+      border: 2px solid $color-primary;
+    }
+  }
+
+  &.page-num {
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    cursor: auto;
+  }
+}
