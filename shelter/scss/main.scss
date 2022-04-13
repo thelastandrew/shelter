@@ -2,10 +2,16 @@
 @import './variables';
 @import './resets';
 @import './modules';
+@import './media-queries';
 
 .header {
   height: 11.25rem;
   padding: 3.75rem 0;
+
+  @include mediaQuery($tablet) {
+    height: 7.5rem;
+    padding: 1.875rem 0;
+  }
 }
 
 .header-logo-title {

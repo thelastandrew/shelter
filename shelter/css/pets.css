@@ -63,6 +63,12 @@ li {
   padding: 0 2.5rem;
 }
 
+@media (max-width: 1279px) {
+  .wrapper {
+    padding: 0 1.875rem;
+  }
+}
+
 header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
