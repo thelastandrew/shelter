@@ -41,6 +41,7 @@ header {
   line-height: 1.15em;
   letter-spacing: 0.1em;
   color: $color-light-xl;
+  margin-left: 4px;
 }
 
 .nav-list {
@@ -78,12 +79,14 @@ header {
 
 // BUTTONS
 .button {
+  display: block;
+  box-sizing: border-box;
   font-family: 'Georgia Regular', serif;
   font-size: 1.0625rem;
   line-height: 1.3em;
   letter-spacing: 0.06em;
   color: $color-dark-3xl;
-  padding: 0.9375rem 2.8125rem;
+  padding: 0.8125rem 2.6875rem;
   border-radius: 6.25rem;
   cursor: pointer;
   transition: 0.3s;
@@ -157,6 +160,12 @@ header {
     background-color: $color-primary;
     border: 2px solid $color-primary;
   }
+}
+
+.pet-pic {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.875rem;
 }
 
 // FOOTER

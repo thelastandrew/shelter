@@ -1,0 +1,202 @@
+@import './fonts';
+@import './variables';
+@import './resets';
+@import './modules';
+
+.start-screen {
+  background: $start-screen-gradient-background;
+}
+
+section {
+  .wrapper {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+.hero {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hero-content {
+  max-width: 460px;
+}
+
+.hero-heading {
+  font-family: 'Georgia Regular', serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: $color-light-xl;
+  margin-top: 10.1875rem;
+  margin-bottom: 2.625rem;
+}
+
+.hero-subheading {
+  font-family: 'Arial Regular', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6em;
+  color: $color-dark-s;
+  margin-bottom: 2.625rem;
+}
+
+.about {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+  }
+
+  p {
+    font-family: 'Arial Regular', sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.6em;
+    color: $color-dark-xl;
+  }
+}
+
+.about-info {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.section-heading {
+  font-size: 2.1875rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
+.pets {
+  background-color: $color-light-l;
+
+  .button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.pets,
+.help {
+  .section-heading {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3.75rem;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.75rem;
+}
+
+.slider-cards {
+  max-width: 61.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.pet-name,
+.option-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.pet-name {
+  margin-bottom: 1.875rem;
+}
+
+.help {
+  .section-heading {
+    max-height: 5.625rem;
+  }
+}
+
+.help-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.4375rem 7.5rem;
+}
+
+.option-pic {
+  display: block;
+  height: 3.75rem;
+  margin: 0 auto 1.875rem;
+}
+
+.donation {
+  background-color: $color-light-l;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+    line-height: 1.15em;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    padding: 0.5em 0.75em;
+    background-color: $color-primary;
+    border-radius: 9px;
+    display: inline-flex;
+    gap: 0.75em;
+    margin-bottom: 1.25rem;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}
+
+.donation-info {
+  max-width: 23.75rem;
+  max-height: 17.626rem;
+}
+
+.bank-info {
+  font-size: 0.9375rem;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  margin-bottom: 1.25rem;
+}
+
+.donation-subinfo {
+  font-family: 'Arial Italic';
+  font-size: 0.75rem;
+  line-height: calc(18em / 12);
+  color: $color-dark-m;
+}
