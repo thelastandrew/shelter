@@ -451,6 +451,16 @@ section .wrapper {
   gap: 7.5rem;
 }
 
+@media (max-width: 1279px) {
+  .about .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 5rem;
+  }
+}
+
 .about p {
   font-family: 'Arial Regular', sans-serif;
   font-size: 0.9375rem;
@@ -459,7 +469,8 @@ section .wrapper {
 }
 
 .about-info {
-  max-width: 430px;
+  max-width: 26.875rem;
+  height: 23.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,10 +478,9 @@ section .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section-heading {

@@ -109,6 +109,11 @@ section {
     justify-content: center;
     align-items: center;
     gap: 7.5rem;
+
+    @include mediaQuery($tablet) {
+      flex-direction: column-reverse;
+      gap: 5rem;
+    }
   }
 
   p {
@@ -120,11 +125,11 @@ section {
 }
 
 .about-info {
-  max-width: 430px;
+  max-width: 26.875rem;
+  height: 23.75rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-between;
 }
 
 .section-heading {
