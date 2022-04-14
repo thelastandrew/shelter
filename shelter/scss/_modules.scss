@@ -168,6 +168,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mediaQuery($tablet) {
+      padding-top: 1.875rem;
+      justify-content: center;
+      gap: 4.0625rem 3.75rem;
+    }
   }
 
   .section-heading {
@@ -178,6 +185,9 @@ header {
   .locations {
     padding-top: 1rem;
     padding-bottom: 3.75rem;
+    @include mediaQuery($tablet) {
+      padding: 0;
+    }
   }
 
   li {

@@ -254,6 +254,18 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1279px) {
+  .footer .wrapper {
+    padding-top: 1.875rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 4.0625rem 3.75rem;
+  }
 }
 
 .footer .section-heading {
@@ -264,6 +276,13 @@ header .wrapper {
 .footer .locations {
   padding-top: 1rem;
   padding-bottom: 3.75rem;
+}
+
+@media (max-width: 1279px) {
+  .footer .contacts,
+  .footer .locations {
+    padding: 0;
+  }
 }
 
 .footer li {
