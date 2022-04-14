@@ -212,6 +212,12 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 3.4375rem 7.5rem;
+
+  @include mediaQuery($tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 10.625rem);
+    column-gap: 3.75rem;
+  }
 }
 
 .option-pic {

@@ -590,6 +590,17 @@ section .wrapper {
   gap: 3.4375rem 7.5rem;
 }
 
+@media (max-width: 1279px) {
+  .help-options {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (10.625rem)[3];
+        grid-template-columns: repeat(3, 10.625rem);
+    -webkit-column-gap: 3.75rem;
+            column-gap: 3.75rem;
+  }
+}
+
 .option-pic {
   display: block;
   height: 3.75rem;
