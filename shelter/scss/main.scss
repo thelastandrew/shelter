@@ -235,6 +235,11 @@ section {
     justify-content: center;
     align-items: center;
     gap: 1.875rem;
+
+    @include mediaQuery($tablet) {
+      flex-direction: column-reverse;
+      gap: 3.75rem;
+    }
   }
 
   .section-heading {
