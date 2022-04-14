@@ -543,6 +543,20 @@ section .wrapper {
           flex-grow: 1;
 }
 
+@media (max-width: 1279px) {
+  .slider-cards {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1279px) {
+  .card:nth-child(3) {
+    display: none;
+  }
+}
+
 .pet-name,
 .option-name {
   font-size: 1.25rem;

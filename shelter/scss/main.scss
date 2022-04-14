@@ -173,6 +173,18 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-grow: 1;
+
+  @include mediaQuery($tablet) {
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+  &:nth-child(3) {
+    @include mediaQuery($tablet) {
+      display: none;
+    }
+  }
 }
 
 .pet-name,
