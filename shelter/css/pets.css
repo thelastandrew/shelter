@@ -33,6 +33,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 html {
@@ -380,6 +382,12 @@ header .wrapper {
   padding-bottom: 6.25rem;
 }
 
+@media (max-width: 1279px) {
+  .pets .wrapper {
+    padding-bottom: 4.75rem;
+  }
+}
+
 .main {
   margin-top: 7.5rem;
 }
@@ -391,6 +399,12 @@ header .wrapper {
   letter-spacing: 0.06em;
   color: #545454;
   margin-bottom: 2.8125rem;
+}
+
+@media (max-width: 1279px) {
+  .section-heading {
+    margin-bottom: 1.875rem;
+  }
 }
 
 .pets {
@@ -415,12 +429,22 @@ header .wrapper {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  row-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px 40px;
   padding: 15px 0;
   margin-bottom: 45px;
+}
+
+@media (max-width: 1279px) {
+  .slider-cards {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .slider-cards .card:nth-last-child(-n + 2) {
+    display: none;
+  }
 }
 
 .pet-name {

@@ -2,6 +2,7 @@
 @import './variables';
 @import './resets';
 @import './modules';
+@import './media-queries';
 
 .header {
   position: fixed;
@@ -42,6 +43,10 @@
   .wrapper {
     padding-top: 5rem;
     padding-bottom: 6.25rem;
+
+    @include mediaQuery($tablet) {
+      padding-bottom: 4.75rem;
+    }
   }
 }
 
@@ -56,6 +61,10 @@
   letter-spacing: 0.06em;
   color: $color-dark-l;
   margin-bottom: 2.8125rem;
+
+  @include mediaQuery($tablet) {
+    margin-bottom: 1.875rem;
+  }
 }
 
 .pets {
@@ -74,10 +83,19 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 30px;
+  justify-content: center;
+  gap: 30px 40px;
   padding: 15px 0;
   margin-bottom: 45px;
+
+  @include mediaQuery($tablet) {
+    padding: 0;
+    margin-bottom: 40px;
+
+    .card:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
 }
 
 .pet-name {
