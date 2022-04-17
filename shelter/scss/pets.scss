@@ -25,6 +25,12 @@
   color: $color-dark-xl;
 }
 
+.nav-list {
+  @include mediaQuery($mobile) {
+    background-color: $color-light-l;
+  }
+}
+
 .nav-link {
   color: $color-dark-l;
 
@@ -37,6 +43,10 @@
   .nav-link {
     color: $color-dark-3xl;
   }
+}
+
+.burger-line {
+  background-color: #000;
 }
 
 .pets {

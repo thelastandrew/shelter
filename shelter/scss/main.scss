@@ -22,6 +22,12 @@
   color: $color-light-xl;
 }
 
+.nav-list {
+  @include mediaQuery($mobile) {
+    background-color: $color-dark-3xl;
+  }
+}
+
 .nav-link {
   color: $color-dark-s;
 
@@ -34,6 +40,10 @@
   .nav-link {
     color: $color-light-s;
   }
+}
+
+.burger-line {
+  background-color: $color-primary;
 }
 
 .start-screen {
