@@ -54,6 +54,11 @@ section {
   .wrapper {
     padding-top: 5rem;
     padding-bottom: 6.25rem;
+
+    @include mediaQuery($mobile) {
+      padding-top: 2.625rem;
+      padding-bottom: 2.625rem;
+    }
   }
 }
 
@@ -137,6 +142,14 @@ section {
       flex-direction: column-reverse;
       gap: 5rem;
     }
+
+    @include mediaQuery($mobile) {
+      gap: 2.625rem;
+    }
+  }
+
+  .section-heading {
+    margin-bottom: 1.5625rem;
   }
 
   p {
@@ -149,10 +162,20 @@ section {
 
 .about-info {
   max-width: 26.875rem;
-  height: 23.75rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  @include mediaQuery($mobile) {
+    max-width: 270px;
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
 }
 
 .section-heading {
@@ -161,6 +184,17 @@ section {
   line-height: 1.3em;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+
+  @include mediaQuery($mobile) {
+    font-size: 1.5625rem;
+  }
+}
+
+.about .section-heading,
+.donation .section-heading {
+  @include mediaQuery($mobile) {
+    text-align: center;
+  }
 }
 
 .pets {

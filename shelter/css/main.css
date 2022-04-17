@@ -487,6 +487,13 @@ section .wrapper {
   padding-bottom: 6.25rem;
 }
 
+@media (max-width: 767px) {
+  section .wrapper {
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+  }
+}
+
 .hero .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,6 +610,16 @@ section .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .about .wrapper {
+    gap: 2.625rem;
+  }
+}
+
+.about .section-heading {
+  margin-bottom: 1.5625rem;
+}
+
 .about p {
   font-family: 'Arial Regular', sans-serif;
   font-size: 0.9375rem;
@@ -612,7 +629,6 @@ section .wrapper {
 
 .about-info {
   max-width: 26.875rem;
-  height: 23.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,9 +636,19 @@ section .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .about-info {
+    max-width: 270px;
+  }
+  .about-info p {
+    text-align: justify;
+  }
+}
+
+.about-info p:not(:last-child) {
+  margin-bottom: 1.5625rem;
 }
 
 .section-heading {
@@ -631,6 +657,19 @@ section .wrapper {
   line-height: 1.3em;
   letter-spacing: 0.06em;
   color: #545454;
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 1.5625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about .section-heading,
+  .donation .section-heading {
+    text-align: center;
+  }
 }
 
 .pets {
