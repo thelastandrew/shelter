@@ -627,6 +627,12 @@ section .wrapper {
   color: #4c4c4c;
 }
 
+@media (max-width: 767px) {
+  .about img {
+    max-width: 260px;
+  }
+}
+
 .about-info {
   max-width: 26.875rem;
   display: -webkit-box;
@@ -688,6 +694,13 @@ section .wrapper {
   margin-bottom: 3.75rem;
 }
 
+@media (max-width: 767px) {
+  .pets .section-heading,
+  .help .section-heading {
+    margin-bottom: 2.625rem;
+  }
+}
+
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,6 +716,20 @@ section .wrapper {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3.75rem;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    margin: 0 auto 2.625rem;
+    max-width: 270px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 5rem;
+            column-gap: 5rem;
+  }
 }
 
 .slider-cards {
@@ -732,8 +759,23 @@ section .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .slider-cards {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 1.25rem;
+  }
+}
+
 @media (max-width: 1279px) {
   .card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .card:not(:first-child) {
     display: none;
   }
 }
@@ -782,10 +824,32 @@ section .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .help-options {
+    -ms-grid-columns: (8.125rem)[2];
+        grid-template-columns: repeat(2, 8.125rem);
+    gap: 1.875rem;
+  }
+}
+
 .option-pic {
   display: block;
   height: 3.75rem;
   margin: 0 auto 1.875rem;
+}
+
+@media (max-width: 767px) {
+  .option-pic {
+    max-height: 50px;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .option-name {
+    font-size: 0.9375rem;
+    line-height: 1.0867em;
+  }
 }
 
 .donation {

@@ -158,6 +158,12 @@ section {
     line-height: 1.6em;
     color: $color-dark-xl;
   }
+
+  img {
+    @include mediaQuery($mobile) {
+      max-width: 260px;
+    }
+  }
 }
 
 .about-info {
@@ -212,6 +218,10 @@ section {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 3.75rem;
+
+    @include mediaQuery($mobile) {
+      margin-bottom: 2.625rem;
+    }
   }
 }
 
@@ -221,6 +231,14 @@ section {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3.75rem;
+
+  @include mediaQuery($mobile) {
+    margin: 0 auto 2.625rem;
+    max-width: 270px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 5rem;
+  }
 }
 
 .slider-cards {
@@ -234,11 +252,22 @@ section {
   @include mediaQuery($tablet) {
     justify-content: space-evenly;
   }
+
+  @include mediaQuery($mobile) {
+    order: -1;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .card {
   &:nth-child(3) {
     @include mediaQuery($tablet) {
+      display: none;
+    }
+  }
+
+  &:not(:first-child) {
+    @include mediaQuery($mobile) {
       display: none;
     }
   }
@@ -275,12 +304,29 @@ section {
     grid-template-columns: repeat(3, 10.625rem);
     column-gap: 3.75rem;
   }
+
+  @include mediaQuery($mobile) {
+    grid-template-columns: repeat(2, 8.125rem);
+    gap: 1.875rem;
+  }
 }
 
 .option-pic {
   display: block;
   height: 3.75rem;
   margin: 0 auto 1.875rem;
+
+  @include mediaQuery($mobile) {
+    max-height: 50px;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.option-name {
+  @include mediaQuery($mobile) {
+    font-size: 0.9375rem;
+    line-height: 1.0867em;
+  }
 }
 
 .donation {
