@@ -532,6 +532,12 @@ section .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .hero-content {
+    margin-bottom: 6.5625rem;
+  }
+}
+
 .hero-heading {
   font-family: 'Georgia Regular', serif;
   font-size: 2.75rem;
@@ -539,6 +545,13 @@ section .wrapper {
   line-height: 1.3em;
   color: #ffffff;
   margin-bottom: 2.625rem;
+}
+
+@media (max-width: 767px) {
+  .hero-heading {
+    font-size: 1.5625rem;
+    text-align: center;
+  }
 }
 
 .hero-subheading {
@@ -554,6 +567,12 @@ section .wrapper {
     max-width: 569px;
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-image {
+    max-width: 260px;
   }
 }
 
