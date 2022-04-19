@@ -542,6 +542,7 @@ section .wrapper {
 @media (max-width: 767px) {
   .hero-content {
     margin-bottom: 6.5625rem;
+    text-align: center;
   }
 }
 
@@ -557,7 +558,7 @@ section .wrapper {
 @media (max-width: 767px) {
   .hero-heading {
     font-size: 1.5625rem;
-    text-align: center;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -657,6 +658,12 @@ section .wrapper {
   margin-bottom: 1.5625rem;
 }
 
+@media (max-width: 767px) {
+  .about-info p:not(:last-child) {
+    margin-bottom: 1.375rem;
+  }
+}
+
 .section-heading {
   font-size: 2.1875rem;
   font-weight: 400;
@@ -753,9 +760,11 @@ section .wrapper {
 
 @media (max-width: 1279px) {
   .slider-cards {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 2.5rem;
+            column-gap: 2.5rem;
   }
 }
 
@@ -873,6 +882,12 @@ section .wrapper {
   gap: 1.875rem;
 }
 
+@media (max-width: 767px) {
+  .donation .wrapper img {
+    max-width: 260px;
+  }
+}
+
 @media (max-width: 1279px) {
   .donation .wrapper {
     -webkit-box-orient: vertical;
@@ -880,6 +895,12 @@ section .wrapper {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     gap: 3.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation .wrapper {
+    gap: 2.625rem;
   }
 }
 
@@ -898,6 +919,9 @@ section .wrapper {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.75em;
   margin-bottom: 1.25rem;
   -webkit-transition: 0.3s;
@@ -908,9 +932,25 @@ section .wrapper {
   background-color: #fddcc4;
 }
 
+@media (max-width: 767px) {
+  .donation a {
+    font-size: 0.9375rem;
+    line-height: 1.1em;
+    padding: 0.625rem 1em;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+  }
+}
+
 .donation-info {
   max-width: 23.75rem;
-  max-height: 17.626rem;
+}
+
+@media (max-width: 767px) {
+  .donation-info {
+    max-width: 18.75rem;
+    padding: 0 9.5px;
+  }
 }
 
 .bank-info {
@@ -921,10 +961,24 @@ section .wrapper {
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 767px) {
+  .bank-info {
+    text-align: center;
+    line-height: 1.6em;
+    letter-spacing: normal;
+  }
+}
+
 .donation-subinfo {
   font-family: 'Arial Italic';
   font-size: 0.75rem;
   line-height: calc(18em / 12);
   color: #b2b2b2;
+}
+
+@media (max-width: 767px) {
+  .donation-subinfo {
+    text-align: justify;
+  }
 }
 /*# sourceMappingURL=main.css.map */
