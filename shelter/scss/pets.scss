@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 
   .wrapper {
     padding-top: 1.875rem;
@@ -57,6 +57,11 @@
     @include mediaQuery($tablet) {
       padding-bottom: 4.75rem;
     }
+
+    @include mediaQuery($mobile) {
+      padding-top: 2.625rem;
+      padding-bottom: 2.625rem;
+    }
   }
 }
 
@@ -74,6 +79,11 @@
 
   @include mediaQuery($tablet) {
     margin-bottom: 1.875rem;
+  }
+
+  @include mediaQuery($mobile) {
+    font-size: 1.5625rem;
+    margin-bottom: 2.625rem;
   }
 }
 
@@ -103,6 +113,12 @@
     margin-bottom: 40px;
 
     .card:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
+
+  @include mediaQuery($mobile) {
+    .card:nth-child(n + 4) {
       display: none;
     }
   }

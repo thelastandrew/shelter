@@ -509,7 +509,7 @@ header .wrapper {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .header .wrapper {
@@ -558,6 +558,13 @@ header .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .pets .wrapper {
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+  }
+}
+
 .main {
   margin-top: 7.5rem;
 }
@@ -574,6 +581,13 @@ header .wrapper {
 @media (max-width: 1279px) {
   .section-heading {
     margin-bottom: 1.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 1.5625rem;
+    margin-bottom: 2.625rem;
   }
 }
 
@@ -613,6 +627,12 @@ header .wrapper {
     margin-bottom: 40px;
   }
   .slider-cards .card:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-cards .card:nth-child(n + 4) {
     display: none;
   }
 }
