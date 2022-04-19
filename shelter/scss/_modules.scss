@@ -241,10 +241,21 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    img {
+      @include mediaQuery($mobile) {
+        max-width: 260px;
+      }
+    }
+
     @include mediaQuery($tablet) {
       padding-top: 1.875rem;
       justify-content: center;
       gap: 4.0625rem 3.75rem;
+    }
+
+    @include mediaQuery($mobile) {
+      text-align: center;
+      row-gap: 40px;
     }
   }
 
@@ -278,8 +289,16 @@ header {
 }
 
 .contacts {
+  max-width: 279px;
+
   .section-heading {
     margin-bottom: 2.5rem;
+  }
+}
+
+.contacts-list {
+  @include mediaQuery($mobile) {
+    padding-left: 13px;
   }
 }
 
@@ -290,6 +309,10 @@ header {
   &::before {
     content: url('../assets/icons/mail.png');
   }
+
+  @include mediaQuery($mobile) {
+    padding-left: 46px;
+  }
 }
 
 .tel {
@@ -298,10 +321,19 @@ header {
   &::before {
     content: url('../assets/icons/phone.png');
   }
+
+  @include mediaQuery($mobile) {
+    padding-left: 46px;
+  }
 }
 
 .locations {
-  min-width: 302px;
+  max-width: 302px;
+
+  @include mediaQuery($mobile) {
+    width: 300px;
+    margin-bottom: 5px;
+  }
 
   li {
     padding-left: 10px;
@@ -309,14 +341,38 @@ header {
     &:nth-child(1) {
       padding-left: 20px;
       margin-bottom: 2rem;
+
+      &::before {
+        @include mediaQuery($mobile) {
+          margin-top: 7px;
+        }
+      }
+
+      @include mediaQuery($mobile) {
+        margin-bottom: 44px;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        @include mediaQuery($mobile) {
+          margin-bottom: 7px;
+        }
+      }
     }
 
     &::before {
       content: url('../assets/icons/pin.png');
+      display: block;
     }
   }
 
   .section-heading {
     margin-bottom: 2.125rem;
+
+    @include mediaQuery($mobile) {
+      max-width: 270px;
+      margin: 0 auto 2.5rem;
+    }
   }
 }
