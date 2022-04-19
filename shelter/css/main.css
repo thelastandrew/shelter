@@ -1037,6 +1037,12 @@ section .wrapper {
   }
 }
 
+@media (max-width: 767px) {
+  .card-number {
+    letter-spacing: 0.05em;
+  }
+}
+
 .donation-subinfo {
   font-family: 'Arial Italic';
   font-size: 0.75rem;
