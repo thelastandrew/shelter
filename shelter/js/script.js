@@ -25,3 +25,11 @@ burgerMenu.addEventListener('click', (el) => {
   body.classList.toggle('blocked');
   nav.classList.toggle('show');
 });
+
+nav.addEventListener('click', (e) => {
+  if (e.target.classList.contains('show')) {
+    body.classList.remove('blocked');
+    burgerMenu.classList.remove('active');
+    nav.classList.remove('show');
+  }
+});
