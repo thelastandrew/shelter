@@ -33,3 +33,32 @@ nav.addEventListener('click', (e) => {
     nav.classList.remove('show');
   }
 });
+
+//Carousel
+const cards = document.querySelector('.slider-cards');
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+
+const moveLeft = () => {
+  cards.classList.add('transition-left');
+  leftBtn.removeEventListener('click', moveLeft);
+  rightBtn.removeEventListener('click', moveRight);
+};
+const moveRight = () => {
+  cards.classList.add('transition-right');
+  leftBtn.removeEventListener('click', moveLeft);
+  rightBtn.removeEventListener('click', moveRight);
+};
+
+leftBtn.addEventListener('click', moveLeft);
+rightBtn.addEventListener('click', moveRight);
+
+cards.addEventListener('animationend', (animationEvent) => {
+  if (animationEvent.animationName === 'move-left') {
+    cards.classList.remove('transition-left');
+  } else {
+    cards.classList.remove('transition-right');
+  }
+  leftBtn.addEventListener('click', moveLeft);
+  rightBtn.addEventListener('click', moveRight);
+});

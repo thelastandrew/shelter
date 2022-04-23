@@ -222,10 +222,15 @@ section {
   .section-heading {
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 3.75rem;
+  }
+}
+
+.pets {
+  .section-heading {
+    margin-bottom: 45px;
 
     @include mediaQuery($mobile) {
-      margin-bottom: 2.625rem;
+      margin-bottom: 27px;
     }
   }
 }
@@ -235,10 +240,10 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 45px;
 
   @include mediaQuery($mobile) {
-    margin: 0 auto 2.625rem;
+    margin: 0 auto 27px;
     max-width: 270px;
     flex-wrap: wrap;
     justify-content: center;
@@ -246,13 +251,21 @@ section {
   }
 }
 
+.slider-frame {
+  width: 1020px;
+  height: 465px;
+  padding: 15px;
+  overflow: hidden;
+}
+
 .slider-cards {
-  max-width: 61.875rem;
+  width: 2790px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   flex-grow: 1;
+  position: relative;
+  left: -1080px;
 
   @include mediaQuery($tablet) {
     justify-content: center;
@@ -279,6 +292,34 @@ section {
   }
 }
 
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+
 .pet-name,
 .option-name {
   font-size: 1.25rem;
@@ -295,6 +336,11 @@ section {
 .help {
   .section-heading {
     max-height: 5.625rem;
+    margin-bottom: 3.75rem;
+
+    @include mediaQuery($mobile) {
+      margin-bottom: 2.625rem;
+    }
   }
 }
 

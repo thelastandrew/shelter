@@ -766,13 +766,15 @@ section .wrapper {
 .help .section-heading {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 3.75rem;
+}
+
+.pets .section-heading {
+  margin-bottom: 45px;
 }
 
 @media (max-width: 767px) {
-  .pets .section-heading,
-  .help .section-heading {
-    margin-bottom: 2.625rem;
+  .pets .section-heading {
+    margin-bottom: 27px;
   }
 }
 
@@ -790,12 +792,12 @@ section .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 45px;
 }
 
 @media (max-width: 767px) {
   .slider {
-    margin: 0 auto 2.625rem;
+    margin: 0 auto 27px;
     max-width: 270px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -807,8 +809,15 @@ section .wrapper {
   }
 }
 
+.slider-frame {
+  width: 1020px;
+  height: 465px;
+  padding: 15px;
+  overflow: hidden;
+}
+
 .slider-cards {
-  max-width: 61.875rem;
+  width: 2790px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,11 +828,11 @@ section .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  position: relative;
+  left: -1080px;
 }
 
 @media (max-width: 1279px) {
@@ -857,6 +866,56 @@ section .wrapper {
   }
 }
 
+@-webkit-keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+.transition-right {
+  -webkit-animation-name: move-right;
+          animation-name: move-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  -webkit-animation-name: move-left;
+          animation-name: move-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
 .pet-name,
 .option-name {
   font-size: 1.25rem;
@@ -872,6 +931,13 @@ section .wrapper {
 
 .help .section-heading {
   max-height: 5.625rem;
+  margin-bottom: 3.75rem;
+}
+
+@media (max-width: 767px) {
+  .help .section-heading {
+    margin-bottom: 2.625rem;
+  }
 }
 
 .help-options {
