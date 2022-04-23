@@ -243,8 +243,8 @@ section {
   margin-bottom: 45px;
 
   @include mediaQuery($mobile) {
-    margin: 0 auto 27px;
-    max-width: 270px;
+    max-width: 300px;
+    margin: 0 auto 42px;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 5rem;
@@ -256,6 +256,17 @@ section {
   height: 465px;
   padding: 15px;
   overflow: hidden;
+
+  @include mediaQuery($tablet) {
+    width: 604px;
+    padding: 15px 12px;
+  }
+
+  @include mediaQuery($mobile) {
+    width: 300px;
+    padding: 15px;
+    order: -1;
+  }
 }
 
 .slider-cards {
@@ -268,27 +279,12 @@ section {
   left: -1080px;
 
   @include mediaQuery($tablet) {
-    justify-content: center;
-    column-gap: 2.5rem;
+    width: 2440px;
+    left: -620px;
   }
 
   @include mediaQuery($mobile) {
-    order: -1;
-    margin-bottom: 1.25rem;
-  }
-}
-
-.card {
-  &:nth-child(3) {
-    @include mediaQuery($tablet) {
-      display: none;
-    }
-  }
-
-  &:not(:first-child) {
-    @include mediaQuery($mobile) {
-      display: none;
-    }
+    left: -310px;
   }
 }
 
@@ -298,6 +294,28 @@ section {
   }
   to {
     left: -2160px;
+  }
+}
+
+@include mediaQuery($tablet) {
+  @keyframes move-right {
+    from {
+      left: -620px;
+    }
+    to {
+      left: -1240px;
+    }
+  }
+}
+
+@include mediaQuery($mobile) {
+  @keyframes move-right {
+    from {
+      left: -310px;
+    }
+    to {
+      left: -620px;
+    }
   }
 }
 
@@ -312,6 +330,28 @@ section {
   }
   to {
     left: 0px;
+  }
+}
+
+@include mediaQuery($tablet) {
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+}
+
+@include mediaQuery($mobile) {
+  @keyframes move-left {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0px;
+    }
   }
 }
 

@@ -1,3 +1,4 @@
+//Navbar and burger menu
 const navItem = document.querySelectorAll('.nav-item');
 const burgerMenu = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
@@ -38,6 +39,10 @@ nav.addEventListener('click', (e) => {
 const cards = document.querySelector('.slider-cards');
 const leftBtn = document.querySelector('.left-btn');
 const rightBtn = document.querySelector('.right-btn');
+let cardArray = document.querySelectorAll('.card');
+let shownCards = Math.floor(
+  document.querySelector('.slider-frame').clientWidth / 270
+);
 
 const moveLeft = () => {
   cards.classList.add('transition-left');
