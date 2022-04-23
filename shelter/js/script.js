@@ -39,6 +39,7 @@ nav.addEventListener('click', (e) => {
 const cards = document.querySelector('.slider-cards');
 const leftBtn = document.querySelector('.left-btn');
 const rightBtn = document.querySelector('.right-btn');
+const frame = document.querySelector('.slider-frame');
 let cardArray = document.querySelectorAll('.card');
 
 const moveLeft = () => {
@@ -47,16 +48,31 @@ const moveLeft = () => {
   rightBtn.removeEventListener('click', moveRight);
 };
 const moveRight = () => {
+  addCard();
   cards.classList.add('transition-right');
   leftBtn.removeEventListener('click', moveLeft);
   rightBtn.removeEventListener('click', moveRight);
 };
 
+function addCard() {
+  if (frame.clientWidth === 1020) {
+    let firstCardClone = cardArray[0].cloneNode(true);
+    cards.style.width = `${cards.clientWidth + 360}px`;
+    cards.appendChild(firstCardClone);
+  }
+}
+
 function shiftCards(direction, step) {
-  for (let i = 0; i < step; i++) {
-    if (direction === 'left') {
+  if (direction === 'left') {
+    for (let i = 0; i < step; i++) {
       cards.insertBefore(cardArray[cardArray.length - 1 - i], cardArray[0]);
-    } else {
+    }
+  } else {
+    if (frame.clientWidth === 1020) {
+      cards.style.width = `${cards.clientWidth - 360}px`;
+      cards.removeChild(cards.lastChild);
+    }
+    for (let i = 0; i < step; i++) {
       cards.appendChild(cardArray[i]);
     }
   }
@@ -68,9 +84,7 @@ rightBtn.addEventListener('click', moveRight);
 
 cards.addEventListener('animationend', (animationEvent) => {
   let dir;
-  let shownCards = Math.floor(
-    document.querySelector('.slider-frame').clientWidth / 270
-  );
+  let shownCards = Math.floor(frame.clientWidth / 270);
   if (animationEvent.animationName === 'move-left') {
     dir = 'left';
     cards.classList.remove('transition-left');

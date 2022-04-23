@@ -849,12 +849,14 @@ section .wrapper {
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
+  -webkit-transition: 0s;
+  transition: 0s;
   left: -1080px;
 }
 
 @media (max-width: 1279px) {
   .slider-cards {
-    width: 2440px;
+    width: 2440px !important;
     left: -620px;
   }
 }
