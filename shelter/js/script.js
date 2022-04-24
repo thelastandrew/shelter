@@ -69,7 +69,7 @@ function shiftCards(direction, step) {
     }
   } else {
     if (frame.clientWidth === 1020) {
-      cards.style.width = `${cards.clientWidth - 360}px`;
+      cards.removeAttribute('style');
       cards.removeChild(cards.lastChild);
     }
     for (let i = 0; i < step; i++) {
@@ -96,3 +96,29 @@ cards.addEventListener('animationend', (animationEvent) => {
   leftBtn.addEventListener('click', moveLeft);
   rightBtn.addEventListener('click', moveRight);
 });
+
+//Pets info
+const petPics = document.querySelectorAll('.pet-pic');
+const petNames = document.querySelectorAll('.pet-name');
+const petBtns = document.querySelectorAll('.pet-btn');
+
+async function getPets() {
+  const res = await fetch('../../js/pets.json');
+  const pets = await res.json();
+  pets.sort(makeRandomArr);
+  fillCard(pets);
+}
+
+function fillCard(data) {
+  for (let i = 0; i < cardArray.length; i++) {
+    petPics[i].src = data[i].img;
+    petNames[i].innerHTML = data[i].name;
+    petBtns[i].setAttribute('id', data[i].name.toLowerCase());
+  }
+}
+
+function makeRandomArr(a, b) {
+  return Math.random() - 0.5;
+}
+
+getPets();

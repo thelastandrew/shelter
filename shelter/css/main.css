@@ -856,7 +856,7 @@ section .wrapper {
 
 @media (max-width: 1279px) {
   .slider-cards {
-    width: 2440px !important;
+    width: 2440px;
     left: -620px;
   }
 }

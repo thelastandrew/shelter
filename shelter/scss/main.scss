@@ -280,7 +280,7 @@ section {
   left: -1080px;
 
   @include mediaQuery($tablet) {
-    width: 2440px !important;
+    width: 2440px;
     left: -620px;
   }
 
