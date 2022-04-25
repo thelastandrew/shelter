@@ -526,11 +526,16 @@ header .wrapper {
           align-items: center;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
 }
 
 .popup.active {
   opacity: 1;
   visibility: visible;
+}
+
+.popup-body {
+  position: relative;
 }
 
 .popup-close {
@@ -584,7 +589,6 @@ header .wrapper {
   display: flex;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  position: relative;
 }
 
 @media (max-width: 1279px) {

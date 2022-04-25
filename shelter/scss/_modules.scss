@@ -393,11 +393,16 @@ header {
   align-items: center;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
 
   &.active {
     opacity: 1;
     visibility: visible;
   }
+}
+
+.popup-body {
+  position: relative;
 }
 
 .popup-close {
@@ -440,7 +445,6 @@ header {
   max-width: 900px;
   display: flex;
   align-content: flex-start;
-  position: relative;
 
   @include mediaQuery($tablet) {
     max-width: 630px;
