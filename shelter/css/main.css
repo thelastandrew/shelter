@@ -148,6 +148,10 @@ header .wrapper {
   right: 0;
 }
 
+.nav.show .nav-list {
+  overflow-y: auto;
+}
+
 @media (max-width: 767px) {
   .nav {
     position: fixed;
@@ -550,6 +554,10 @@ header .wrapper {
           align-items: center;
 }
 
+.popup-close:hover {
+  background-color: #f1cdb3;
+}
+
 .popup-line {
   width: 17px;
   height: 2px;
@@ -571,7 +579,6 @@ header .wrapper {
   background-color: white;
   border-radius: 9px;
   max-width: 900px;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

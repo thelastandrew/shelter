@@ -100,7 +100,6 @@ cards.addEventListener('animationend', (animationEvent) => {
 //Pets info
 const petPics = document.querySelectorAll('.pet-pic');
 const petNames = document.querySelectorAll('.pet-name');
-const petBtns = document.querySelectorAll('.pet-btn');
 
 async function getPets() {
   const res = await fetch('../../js/pets.json');
@@ -113,7 +112,8 @@ function fillCard(data) {
   for (let i = 0; i < cardArray.length; i++) {
     petPics[i].src = data[i].img;
     petNames[i].innerHTML = data[i].name;
-    petBtns[i].setAttribute('id', data[i].name.toLowerCase());
+    cardArray[i].setAttribute('id', data[i].name.toLowerCase());
+    cardArray[i].addEventListener('click', fillPopup);
   }
 }
 
@@ -122,3 +122,58 @@ function makeRandomArr(a, b) {
 }
 
 getPets();
+
+//Pop up
+const popup = document.querySelector('.popup');
+const closePopupBtn = document.querySelector('.popup-close');
+let name = document.querySelector('.popup-title');
+let img = document.querySelector('.popup-pic');
+let animalType = document.querySelector('.animalType');
+let breed = document.querySelector('.breed');
+let description = document.querySelector('.popup-info');
+let age = document.querySelector('.popup-age');
+let inoculations = document.querySelector('.popup-inoculations');
+let diseases = document.querySelector('.popup-diseases');
+let parasites = document.querySelector('.popup-parasites');
+
+closePopupBtn.addEventListener('click', () => {
+  popup.classList.remove('active');
+  body.classList.remove('blocked');
+});
+
+popup.addEventListener('click', (e) => {
+  if (e.target.classList.contains('active')) {
+    popup.classList.remove('active');
+    body.classList.remove('blocked');
+  }
+});
+
+async function fillPopup() {
+  const res = await fetch('../../js/pets.json');
+  const pets = await res.json();
+  let petID = this.id;
+  showPopup(pets, petID);
+}
+
+function showPopup(data, myID) {
+  let petIndex;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].name.toLowerCase() === myID) {
+      petIndex = i;
+    }
+  }
+
+  let petObj = data[petIndex];
+
+  name.innerHTML = petObj.name;
+  img.src = petObj.img;
+  animalType.innerHTML = petObj.type;
+  breed.innerHTML = petObj.breed;
+  description.innerHTML = petObj.description;
+  age.innerHTML = petObj.age;
+  inoculations.innerHTML = petObj.inoculations.join(', ');
+  diseases.innerHTML = petObj.diseases.join(', ');
+  parasites.innerHTML = petObj.parasites.join(', ');
+  popup.classList.add('active');
+  body.classList.add('blocked');
+}

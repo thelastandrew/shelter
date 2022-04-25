@@ -63,6 +63,10 @@ header {
 .nav {
   &.show {
     right: 0;
+
+    .nav-list {
+      overflow-y: auto;
+    }
   }
   @include mediaQuery($mobile) {
     position: fixed;
@@ -409,6 +413,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: $color-primary;
+  }
 }
 
 .popup-line {
@@ -430,7 +438,6 @@ header {
   background-color: white;
   border-radius: 9px;
   max-width: 900px;
-  height: 500px;
   display: flex;
   align-content: flex-start;
   position: relative;
