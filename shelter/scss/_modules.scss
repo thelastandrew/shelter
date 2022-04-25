@@ -376,3 +376,168 @@ header {
     }
   }
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 29, 29, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.popup-close {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  top: -52px;
+  right: -42px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-line {
+  width: 17px;
+  height: 2px;
+  background-color: $color-dark-2xl;
+  border-radius: 1px;
+
+  &.line1 {
+    transform: rotate(45deg) translate(6px, -6px);
+  }
+
+  &.line2 {
+    transform: rotate(-45deg) translate(-6px, -6px);
+  }
+}
+
+.popup-card {
+  background-color: white;
+  border-radius: 9px;
+  max-width: 900px;
+  height: 500px;
+  display: flex;
+  align-content: flex-start;
+  position: relative;
+
+  @include mediaQuery($tablet) {
+    max-width: 630px;
+    height: 350px;
+  }
+
+  @include mediaQuery($mobile) {
+    max-width: 75%;
+    height: auto;
+  }
+}
+
+.popup-content {
+  padding-top: 50px;
+  padding-left: 29px;
+  padding-right: 20px;
+
+  li {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.1em;
+    letter-spacing: 0.06em;
+    text-align: left;
+    position: relative;
+    margin-left: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: $color-primary;
+      border-radius: 2px;
+      position: absolute;
+      top: 6.5px;
+      left: -14px;
+    }
+  }
+
+  @include mediaQuery($tablet) {
+    padding: 10px;
+  }
+}
+
+.popup-pic {
+  width: 500px;
+  height: 500px;
+  border-radius: 9px;
+
+  @include mediaQuery($tablet) {
+    width: 350px;
+    height: 350px;
+  }
+
+  @include mediaQuery($mobile) {
+    display: none;
+  }
+}
+
+.popup-title {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+
+  @include mediaQuery($mobile) {
+    text-align: center;
+  }
+}
+
+.popup-subtitle {
+  font-size: 20px;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  margin-bottom: 40px;
+
+  @include mediaQuery($tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include mediaQuery($mobile) {
+    text-align: center;
+  }
+}
+
+.popup-info {
+  font-size: 15px;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+  margin-bottom: 40px;
+
+  @include mediaQuery($tablet) {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  @include mediaQuery($mobile) {
+    text-align: justify;
+  }
+}
+
+.popup-li-title {
+  font-weight: 700;
+}
