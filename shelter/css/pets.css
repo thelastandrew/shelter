@@ -534,10 +534,6 @@ header .wrapper {
   visibility: visible;
 }
 
-.popup-body {
-  position: relative;
-}
-
 .popup-close {
   width: 52px;
   height: 52px;
@@ -589,6 +585,7 @@ header .wrapper {
   display: flex;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  position: relative;
 }
 
 @media (max-width: 1279px) {
@@ -719,11 +716,7 @@ header .wrapper {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffff;
 }
 
 .header .wrapper {
@@ -777,10 +770,6 @@ header .wrapper {
     padding-top: 2.625rem;
     padding-bottom: 2.625rem;
   }
-}
-
-.main {
-  margin-top: 7.5rem;
 }
 
 .section-heading {

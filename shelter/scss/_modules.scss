@@ -401,10 +401,6 @@ header {
   }
 }
 
-.popup-body {
-  position: relative;
-}
-
 .popup-close {
   width: 52px;
   height: 52px;
@@ -445,6 +441,7 @@ header {
   max-width: 900px;
   display: flex;
   align-content: flex-start;
+  position: relative;
 
   @include mediaQuery($tablet) {
     max-width: 630px;
