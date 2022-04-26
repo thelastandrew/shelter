@@ -47,8 +47,7 @@
 
 .pets {
   .wrapper {
-    padding-top: 5rem;
-    padding-bottom: 6.25rem;
+    padding: 5rem 25px 6.25rem;
 
     @include mediaQuery($tablet) {
       padding-bottom: 4.75rem;
@@ -91,30 +90,107 @@
   }
 }
 
-.slider-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px 40px;
-  padding: 15px 0;
+.slider-frame {
+  overflow: hidden;
+  padding: 15px;
   margin-bottom: 45px;
 
   @include mediaQuery($tablet) {
-    padding: 0;
-    margin-bottom: 40px;
-
-    .card:nth-last-child(-n + 2) {
-      display: none;
-    }
+    max-width: 610px;
+    height: 1395px;
+    margin: 0 auto 40px;
   }
 
   @include mediaQuery($mobile) {
-    .card:nth-child(n + 4) {
-      display: none;
-    }
+    max-width: 300px;
   }
 }
+
+.slider-cards {
+  height: 930px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px 40px;
+  position: relative;
+  left: 0px;
+
+  @include mediaQuery($tablet) {
+    height: 1395px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -1200px;
+  }
+}
+
+// @include mediaQuery($tablet) {
+//   @keyframes move-right {
+//     from {
+//       left: -620px;
+//     }
+//     to {
+//       left: -1240px;
+//     }
+//   }
+// }
+
+// @include mediaQuery($mobile) {
+//   @keyframes move-right {
+//     from {
+//       left: -310px;
+//     }
+//     to {
+//       left: -620px;
+//     }
+//   }
+// }
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 0.5s;
+}
+
+// @keyframes move-left {
+//   from {
+//     left: -1080px;
+//   }
+//   to {
+//     left: 0px;
+//   }
+// }
+
+// @include mediaQuery($tablet) {
+//   @keyframes move-left {
+//     from {
+//       left: -620px;
+//     }
+//     to {
+//       left: 0px;
+//     }
+//   }
+// }
+
+// @include mediaQuery($mobile) {
+//   @keyframes move-left {
+//     from {
+//       left: -310px;
+//     }
+//     to {
+//       left: 0px;
+//     }
+//   }
+// }
+
+// .transition-left {
+//   animation-name: move-left;
+//   animation-duration: 0.5s;
+// }
 
 .pet-name {
   font-size: 1.25rem;
