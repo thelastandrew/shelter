@@ -555,7 +555,7 @@ header .wrapper {
           align-items: center;
 }
 
-.popup-close:hover {
+.popup-close:hover, .popup-close.hovered {
   background-color: #f1cdb3;
 }
 

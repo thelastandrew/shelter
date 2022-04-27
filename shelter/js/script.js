@@ -89,3 +89,11 @@ function showPopup(data, myID) {
   popup.classList.add('active');
   body.classList.add('blocked');
 }
+
+popup.onmouseover = (e) => {
+  if (e.target === e.currentTarget) closePopupBtn.classList.add('hovered');
+};
+
+popup.onmouseout = (e) => {
+  if (e.target === e.currentTarget) closePopupBtn.classList.remove('hovered');
+};
