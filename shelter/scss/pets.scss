@@ -54,8 +54,7 @@
     }
 
     @include mediaQuery($mobile) {
-      padding-top: 2.625rem;
-      padding-bottom: 2.625rem;
+      padding: 2.625rem 10px;
     }
   }
 }

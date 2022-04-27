@@ -766,8 +766,7 @@ header .wrapper {
 
 @media (max-width: 767px) {
   .pets .wrapper {
-    padding-top: 2.625rem;
-    padding-bottom: 2.625rem;
+    padding: 2.625rem 10px;
   }
 }
 

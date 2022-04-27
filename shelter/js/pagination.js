@@ -59,32 +59,65 @@ endBtn.addEventListener('click', moveToEnd);
 
 function moveRight() {
   if (curPage === 1) {
-    activateBtn(leftBtn, leftMove);
+    activateBtn(leftBtn, moveLeft);
+    activateBtn(begBtn, moveToStart);
   }
   cards.style.left = `${position - colShown * 310}px`;
   position -= colShown * 310;
   curPage += 1;
   pgIndicator.innerHTML = curPage;
-  pageCheck(curPage);
+  rightCheck(curPage);
 }
 
 function moveToEnd() {
   if (curPage === 1) {
-    activateBtn(leftBtn, leftMove);
+    activateBtn(leftBtn, moveLeft);
+    activateBtn(begBtn, moveToStart);
   }
   position = -colShown * 310 * (pagesAvail - 1);
   cards.style.left = `${position}px`;
-  pgIndicator.innerHTML = pagesAvail;
+  curPage = pagesAvail;
+  pgIndicator.innerHTML = curPage;
   deActivateBtn(rightBtn, moveRight);
   deActivateBtn(endBtn, moveToEnd);
 }
 
-function leftMove() {}
+function moveLeft() {
+  if (curPage === pagesAvail) {
+    activateBtn(rightBtn, moveRight);
+    activateBtn(endBtn, moveToEnd);
+  }
+  cards.style.left = `${position + colShown * 310}px`;
+  position += colShown * 310;
+  curPage -= 1;
+  pgIndicator.innerHTML = curPage;
+  leftCheck(curPage);
+}
 
-function pageCheck(page) {
+function moveToStart() {
+  if (curPage === pagesAvail) {
+    activateBtn(rightBtn, moveRight);
+    activateBtn(endBtn, moveToEnd);
+  }
+  position = 0;
+  cards.style.left = '0px';
+  curPage = 1;
+  pgIndicator.innerHTML = 1;
+  deActivateBtn(leftBtn, moveLeft);
+  deActivateBtn(begBtn, moveToStart);
+}
+
+function rightCheck(page) {
   if (page === pagesAvail) {
     deActivateBtn(rightBtn, moveRight);
     deActivateBtn(endBtn, moveToEnd);
+  }
+}
+
+function leftCheck(page) {
+  if (page === 1) {
+    deActivateBtn(leftBtn, moveLeft);
+    deActivateBtn(begBtn, moveToStart);
   }
 }
 
