@@ -107,6 +107,7 @@
 }
 
 .slider-cards {
+  width: 7400px;
   height: 930px;
   display: flex;
   flex-direction: column;
@@ -116,81 +117,10 @@
   left: 0px;
 
   @include mediaQuery($tablet) {
+    width: 4920px;
     height: 1395px;
   }
 }
-
-@keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -1200px;
-  }
-}
-
-// @include mediaQuery($tablet) {
-//   @keyframes move-right {
-//     from {
-//       left: -620px;
-//     }
-//     to {
-//       left: -1240px;
-//     }
-//   }
-// }
-
-// @include mediaQuery($mobile) {
-//   @keyframes move-right {
-//     from {
-//       left: -310px;
-//     }
-//     to {
-//       left: -620px;
-//     }
-//   }
-// }
-
-.transition-right {
-  animation-name: move-right;
-  animation-duration: 0.5s;
-}
-
-// @keyframes move-left {
-//   from {
-//     left: -1080px;
-//   }
-//   to {
-//     left: 0px;
-//   }
-// }
-
-// @include mediaQuery($tablet) {
-//   @keyframes move-left {
-//     from {
-//       left: -620px;
-//     }
-//     to {
-//       left: 0px;
-//     }
-//   }
-// }
-
-// @include mediaQuery($mobile) {
-//   @keyframes move-left {
-//     from {
-//       left: -310px;
-//     }
-//     to {
-//       left: 0px;
-//     }
-//   }
-// }
-
-// .transition-left {
-//   animation-name: move-left;
-//   animation-duration: 0.5s;
-// }
 
 .pet-name {
   font-size: 1.25rem;

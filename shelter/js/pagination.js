@@ -10,14 +10,14 @@ function makeRandomArr(a, b) {
   return Math.random() - 0.5;
 }
 
-const paginationBoard = document.querySelector('.pagination-cards');
+const cards = document.querySelector('.slider-cards');
 const CARDS_NUMBER = 48;
 for (let i = 0; i < CARDS_NUMBER; i++) {
   const card = document.createElement('div');
   card.classList.add('card');
   card.innerHTML =
     '<img class="pet-pic" src alt="pet-pic"><h3 class="pet-name"></h3><button class="button transp-btn">Learn more</button>';
-  paginationBoard.append(card);
+  cards.append(card);
 }
 
 let cardArray = document.querySelectorAll('.card');
@@ -35,8 +35,67 @@ function fillCard(data) {
         'id',
         data[j].name.toLowerCase()
       );
+      cardArray[j + data.length * i].addEventListener('click', fillPopup);
     }
   }
 }
 
 getPets();
+
+//Pagination
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+const begBtn = document.querySelector('.beginning-btn');
+const endBtn = document.querySelector('.ending-btn');
+let pgIndicator = document.querySelector('.page-num');
+const frame = document.querySelector('.slider-frame');
+let colShown = Math.floor(frame.clientWidth / 270);
+let pagesAvail = Math.floor(cards.scrollWidth / frame.clientWidth);
+let curPage = 1;
+let position = 0;
+
+rightBtn.addEventListener('click', moveRight);
+endBtn.addEventListener('click', moveToEnd);
+
+function moveRight() {
+  if (curPage === 1) {
+    activateBtn(leftBtn, leftMove);
+  }
+  cards.style.left = `${position - colShown * 310}px`;
+  position -= colShown * 310;
+  curPage += 1;
+  pgIndicator.innerHTML = curPage;
+  pageCheck(curPage);
+}
+
+function moveToEnd() {
+  if (curPage === 1) {
+    activateBtn(leftBtn, leftMove);
+  }
+  position = -colShown * 310 * (pagesAvail - 1);
+  cards.style.left = `${position}px`;
+  pgIndicator.innerHTML = pagesAvail;
+  deActivateBtn(rightBtn, moveRight);
+  deActivateBtn(endBtn, moveToEnd);
+}
+
+function leftMove() {}
+
+function pageCheck(page) {
+  if (page === pagesAvail) {
+    deActivateBtn(rightBtn, moveRight);
+    deActivateBtn(endBtn, moveToEnd);
+  }
+}
+
+function activateBtn(button, move) {
+  button.classList.remove('inactive');
+  button.classList.add('active');
+  button.addEventListener('click', move);
+}
+
+function deActivateBtn(button, move) {
+  button.classList.remove('active');
+  button.classList.add('inactive');
+  button.removeEventListener('click', move);
+}

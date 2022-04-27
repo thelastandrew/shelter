@@ -826,6 +826,7 @@ header .wrapper {
 }
 
 .slider-cards {
+  width: 7400px;
   height: 930px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -843,33 +844,9 @@ header .wrapper {
 
 @media (max-width: 1279px) {
   .slider-cards {
+    width: 4920px;
     height: 1395px;
   }
-}
-
-@-webkit-keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -1200px;
-  }
-}
-
-@keyframes move-right {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -1200px;
-  }
-}
-
-.transition-right {
-  -webkit-animation-name: move-right;
-          animation-name: move-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
 }
 
 .pet-name {
