@@ -732,6 +732,10 @@ header .wrapper {
   color: #4c4c4c;
 }
 
+.nav.show {
+  z-index: 2;
+}
+
 @media (max-width: 767px) {
   .nav-list {
     background-color: #f6f6f6;
@@ -748,6 +752,10 @@ header .wrapper {
 
 .active-nav .nav-link {
   color: #292929;
+}
+
+.burger-menu {
+  z-index: 3;
 }
 
 .burger-line {

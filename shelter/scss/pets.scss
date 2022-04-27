@@ -21,6 +21,10 @@
   color: $color-dark-xl;
 }
 
+.nav.show {
+  z-index: 2;
+}
+
 .nav-list {
   @include mediaQuery($mobile) {
     background-color: $color-light-l;
@@ -39,6 +43,10 @@
   .nav-link {
     color: $color-dark-3xl;
   }
+}
+
+.burger-menu {
+  z-index: 3;
 }
 
 .burger-line {
