@@ -372,6 +372,12 @@ header .wrapper {
   }
 }
 
+@media (max-width: 660px) {
+  .footer .wrapper {
+    max-width: 320px;
+  }
+}
+
 @media (max-width: 767px) {
   .footer .wrapper {
     text-align: center;

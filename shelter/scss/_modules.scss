@@ -257,6 +257,10 @@ header {
       gap: 4.0625rem 3.75rem;
     }
 
+    @include mediaQuery($submobile) {
+      max-width: 320px;
+    }
+
     @include mediaQuery($mobile) {
       text-align: center;
       row-gap: 40px;
