@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Pets</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../css/pets.css">
   <link rel="icon" href="../../assets/icons/pawprint.ico">
 </head>
 
@@ -29,7 +29,7 @@
             <a href="../main/index.html" class="nav-link">About the shelter</a>
           </li>
           <li class="nav-item active-nav">
-            <a href="#pets" class="nav-link">Our pets</a>
+            <a href="#" class="nav-link">Our pets</a>
           </li>
           <li class="nav-item">
             <a href="../main/index.html#help" class="nav-link">Help the shelter</a>
@@ -39,6 +39,11 @@
           </li>
         </ul>
       </nav>
+      <div class="burger-menu">
+        <div class="burger-line line-1"></div>
+        <div class="burger-line line-2"></div>
+        <div class="burger-line line-3"></div>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -48,46 +53,8 @@
           Our friends who<br> are looking for a house
         </h2>
         <div class="slider">
-          <div class="slider-cards">
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/katrine.png" alt="pet-pic">
-              <h3 class="pet-name">Katrine</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/jennifer.png" alt="pet-pic">
-              <h3 class="pet-name">Jennifer</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/woody.png" alt="pet-pic">
-              <h3 class="pet-name">Woody</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/sophie.png" alt="pet-pic">
-              <h3 class="pet-name">Sophia</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/timmy.png" alt="pet-pic">
-              <h3 class="pet-name">Timmy</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/charly.png" alt="pet-pic">
-              <h3 class="pet-name">Charly</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/scarlet.png" alt="pet-pic">
-              <h3 class="pet-name">Scarlett</h3>
-              <button class="button transp-btn">Learn more</button>
-            </div>
-            <div class="card">
-              <img class="pet-pic" src="../../assets/images/freddie.png" alt="pet-pic">
-              <h3 class="pet-name">Freddie</h3>
-              <button class="button transp-btn">Learn more</button>
+          <div class="slider-frame">
+            <div class="slider-cards">
             </div>
           </div>
           <div class="slider-controls">
@@ -112,14 +79,14 @@
   <footer class="footer" id="contacts">
     <div class="wrapper">
       <div class="contacts">
-        <h2 class="section-heading">For questions<br> and suggestions</h2>
+        <h2 class="section-heading">For questions and suggestions</h2>
         <ul class="contacts-list">
           <li class="email"><a href="mailto:email@shelter.com">email@shelter.com</a></li>
           <li class="tel"><a href="tel:+136745677554">+13 674 567 75 54</a></li>
         </ul>
       </div>
       <div class="locations">
-        <h2 class="section-heading">We are waiting<br> for your visit</h2>
+        <h2 class="section-heading">We are waiting for your visit</h2>
         <ul class="lication-list">
           <li><a href="https://goo.gl/maps/ZjM64YKHYjTxH7296" target="_blank">1 Central Street, Boston<br> (entrance
               from the store)</a></li>
@@ -129,6 +96,29 @@
       <img src="../../assets/images/footer-puppy.png" alt="Footer puppy">
     </div>
   </footer>
+  <div class="popup">
+    <div class="popup-card">
+      <button class="popup-close">
+        <div class="popup-line line1"></div>
+        <div class="popup-line line2"></div>
+      </button>
+      <img src alt="pet pic" class="popup-pic">
+      <div class="popup-content">
+        <h3 class="popup-title"></h3>
+        <p class="popup-subtitle"><span class="animalType"></span> - <span class="breed"></span></p>
+        <p class="popup-info"></p>
+        <ul>
+          <li><span class="popup-li-title">Age: </span><span class="popup-age"></span></li>
+          <li><span class="popup-li-title">Inoculations: </span><span class="popup-inoculations"></span></li>
+          <li><span class="popup-li-title">Diseases: </span><span class="popup-diseases"></span>
+          </li>
+          <li><span class="popup-li-title">Parasites: </span><span class="popup-parasites"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/pagination.js"></script>
 </body>
 
 </html>

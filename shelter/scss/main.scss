@@ -1,0 +1,521 @@
+@import './fonts';
+@import './variables';
+@import './resets';
+@import './modules';
+@import './media-queries';
+
+.header {
+  height: 11.25rem;
+  padding: 3.75rem 0;
+
+  @include mediaQuery($tablet) {
+    height: 7.5rem;
+    padding: 1.875rem 0;
+  }
+}
+
+.header-logo-title {
+  color: $color-primary;
+}
+
+.header-logo-subtitle {
+  color: $color-light-xl;
+}
+
+.nav-list {
+  @include mediaQuery($mobile) {
+    background-color: $color-dark-3xl;
+  }
+}
+
+.nav-link {
+  color: $color-dark-s;
+
+  &:hover {
+    color: $color-light-s;
+  }
+}
+
+.active-nav {
+  .nav-link {
+    color: $color-light-s;
+  }
+}
+
+.burger-line {
+  background-color: $color-primary;
+}
+
+.start-screen {
+  background: $start-screen-gradient-background;
+}
+
+section {
+  .wrapper {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+
+    @include mediaQuery($mobile) {
+      padding-top: 2.625rem;
+      padding-bottom: 2.625rem;
+    }
+  }
+}
+
+.hero {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include mediaQuery($tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .button {
+    @include mediaQuery($tablet) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.hero-content {
+  max-width: 460px;
+  padding-top: 10.1875rem;
+
+  @include mediaQuery($tablet) {
+    padding-top: 1.875rem;
+    margin-bottom: 6.25rem;
+  }
+
+  @include mediaQuery($mobile) {
+    margin-bottom: 6.5625rem;
+    text-align: center;
+  }
+}
+
+.hero-heading {
+  font-family: 'Georgia Regular', serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: $color-light-xl;
+  margin-bottom: 2.625rem;
+
+  @include mediaQuery($mobile) {
+    font-size: 1.5625rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+.hero-subheading {
+  font-family: 'Arial Regular', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6em;
+  color: $color-dark-s;
+  margin-bottom: 2.625rem;
+}
+
+.hero-image {
+  @include mediaQuery($tablet) {
+    max-width: 569px;
+    align-self: flex-end;
+  }
+
+  @include mediaQuery($mobile) {
+    max-width: 260px;
+  }
+}
+
+.about {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+
+    @include mediaQuery($tablet) {
+      flex-direction: column-reverse;
+      gap: 5rem;
+    }
+
+    @include mediaQuery($mobile) {
+      gap: 2.625rem;
+    }
+  }
+
+  .section-heading {
+    margin-bottom: 1.5625rem;
+  }
+
+  p {
+    font-family: 'Arial Regular', sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.6em;
+    color: $color-dark-xl;
+  }
+
+  img {
+    @include mediaQuery($mobile) {
+      max-width: 260px;
+    }
+  }
+}
+
+.about-info {
+  max-width: 26.875rem;
+  display: flex;
+  flex-direction: column;
+
+  @include mediaQuery($mobile) {
+    max-width: 270px;
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1.5625rem;
+
+    @include mediaQuery($mobile) {
+      margin-bottom: 1.375rem;
+    }
+  }
+}
+
+.section-heading {
+  font-size: 2.1875rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+
+  @include mediaQuery($mobile) {
+    font-size: 1.5625rem;
+  }
+}
+
+.about .section-heading,
+.donation .section-heading {
+  @include mediaQuery($mobile) {
+    text-align: center;
+  }
+}
+
+.pets {
+  background-color: $color-light-l;
+
+  .button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.pets,
+.help {
+  .section-heading {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.pets {
+  position: relative;
+  .section-heading {
+    margin-bottom: 45px;
+
+    @include mediaQuery($mobile) {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+
+  @include mediaQuery($mobile) {
+    max-width: 300px;
+    margin: 0 auto 42px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 5rem;
+  }
+}
+
+.slider-frame {
+  width: 1020px;
+  height: 465px;
+  padding: 15px;
+  overflow: hidden;
+
+  @include mediaQuery($tablet) {
+    width: 604px;
+    padding: 15px 12px;
+  }
+
+  @include mediaQuery($mobile) {
+    width: 300px;
+    padding: 15px;
+    order: -1;
+  }
+}
+
+.slider-cards {
+  width: 2790px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+  position: relative;
+  transition: 0s;
+  left: -1080px;
+
+  @include mediaQuery($tablet) {
+    width: 2440px;
+    left: -620px;
+  }
+
+  @include mediaQuery($mobile) {
+    left: -310px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+@include mediaQuery($tablet) {
+  @keyframes move-right {
+    from {
+      left: -620px;
+    }
+    to {
+      left: -1240px;
+    }
+  }
+}
+
+@include mediaQuery($mobile) {
+  @keyframes move-right {
+    from {
+      left: -310px;
+    }
+    to {
+      left: -620px;
+    }
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 0.5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@include mediaQuery($tablet) {
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+}
+
+@include mediaQuery($mobile) {
+  @keyframes move-left {
+    from {
+      left: -310px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 0.5s;
+}
+
+.pet-name,
+.option-name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15em;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.pet-name {
+  margin-bottom: 1.875rem;
+}
+
+.help {
+  .section-heading {
+    max-height: 5.625rem;
+    margin-bottom: 3.75rem;
+
+    @include mediaQuery($mobile) {
+      margin-bottom: 2.625rem;
+    }
+  }
+}
+
+.help-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.4375rem 7.5rem;
+
+  @include mediaQuery($tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 10.625rem);
+    column-gap: 3.75rem;
+  }
+
+  @include mediaQuery($mobile) {
+    grid-template-columns: repeat(2, 8.125rem);
+    gap: 1.875rem;
+  }
+}
+
+.option-pic {
+  display: block;
+  height: 3.75rem;
+  margin: 0 auto 1.875rem;
+
+  @include mediaQuery($mobile) {
+    max-height: 50px;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.option-name {
+  @include mediaQuery($mobile) {
+    font-size: 0.9375rem;
+    line-height: 1.0867em;
+  }
+}
+
+.donation {
+  background-color: $color-light-l;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+
+    img {
+      @include mediaQuery($mobile) {
+        max-width: 260px;
+      }
+    }
+
+    @include mediaQuery($tablet) {
+      flex-direction: column-reverse;
+      gap: 3.75rem;
+    }
+
+    @include mediaQuery($mobile) {
+      gap: 2.625rem;
+    }
+  }
+
+  .section-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+    line-height: 1.15em;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    padding: 0.5em 0.75em;
+    background-color: $color-primary;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 1.25rem;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+
+    @include mediaQuery($mobile) {
+      font-size: 0.9375rem;
+      line-height: 1.1em;
+      padding: 0.625rem 1em;
+      column-gap: 1em;
+    }
+  }
+}
+
+.donation-info {
+  max-width: 23.75rem;
+
+  @include mediaQuery($mobile) {
+    max-width: 18.75rem;
+    padding: 0 9.5px;
+  }
+}
+
+.bank-info {
+  font-size: 0.9375rem;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  margin-bottom: 1.25rem;
+
+  @include mediaQuery($mobile) {
+    text-align: center;
+    line-height: 1.6em;
+    letter-spacing: normal;
+  }
+}
+
+.card-number {
+  @include mediaQuery($mobile) {
+    letter-spacing: 0.05em;
+  }
+}
+
+.donation-subinfo {
+  font-family: 'Arial Italic';
+  font-size: 0.75rem;
+  line-height: calc(18em / 12);
+  color: $color-dark-m;
+
+  @include mediaQuery($mobile) {
+    text-align: justify;
+  }
+}
