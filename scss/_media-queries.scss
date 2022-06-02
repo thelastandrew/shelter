@@ -1,0 +1,9 @@
+$tablet: 1279px;
+$submobile: 660px;
+$mobile: 767px;
+
+@mixin mediaQuery($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
