@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Pets</title>
+  <link rel="stylesheet" href="../../css/pets.css">
+  <link rel="icon" href="../../assets/icons/pawprint.ico">
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header-logo">
+        <a href="../main/index.html">
+          <h1 class="header-logo-title">
+            Cozy House
+          </h1>
+          <div class="header-logo-subtitle">
+            Shelter for pets in Boston
+          </div>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../main/index.html" class="nav-link">About the shelter</a>
+          </li>
+          <li class="nav-item active-nav">
+            <a href="#" class="nav-link">Our pets</a>
+          </li>
+          <li class="nav-item">
+            <a href="../main/index.html#help" class="nav-link">Help the shelter</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contacts" class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger-menu">
+        <div class="burger-line line-1"></div>
+        <div class="burger-line line-2"></div>
+        <div class="burger-line line-3"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="pets" id="pets">
+      <div class="wrapper">
+        <h2 class="section-heading">
+          Our friends who<br> are looking for a house
+        </h2>
+        <div class="slider">
+          <div class="slider-frame">
+            <div class="slider-cards">
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="circle-btn beginning-btn inactive">
+              &lt;&lt;
+            </button>
+            <button class="circle-btn left-btn inactive">
+              &lt;
+            </button>
+            <button class="circle-btn page-num">1</button>
+            <button class="circle-btn right-btn active">
+              &gt;
+            </button>
+            <button class="circle-btn ending-btn active">
+              &gt;&gt;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="contacts">
+    <div class="wrapper">
+      <div class="contacts">
+        <h2 class="section-heading">For questions and suggestions</h2>
+        <ul class="contacts-list">
+          <li class="email"><a href="mailto:email@shelter.com">email@shelter.com</a></li>
+          <li class="tel"><a href="tel:+136745677554">+13 674 567 75 54</a></li>
+        </ul>
+      </div>
+      <div class="locations">
+        <h2 class="section-heading">We are waiting for your visit</h2>
+        <ul class="lication-list">
+          <li><a href="https://goo.gl/maps/ZjM64YKHYjTxH7296" target="_blank">1 Central Street, Boston<br> (entrance
+              from the store)</a></li>
+          <li><a href="https://goo.gl/maps/jG56XWwTL2dp6kv59" target="_blank">18 South Park, London</a></li>
+        </ul>
+      </div>
+      <img src="../../assets/images/footer-puppy.png" alt="Footer puppy">
+    </div>
+  </footer>
+  <div class="popup">
+    <div class="popup-card">
+      <button class="popup-close">
+        <div class="popup-line line1"></div>
+        <div class="popup-line line2"></div>
+      </button>
+      <img src alt="pet pic" class="popup-pic">
+      <div class="popup-content">
+        <h3 class="popup-title"></h3>
+        <p class="popup-subtitle"><span class="animalType"></span> - <span class="breed"></span></p>
+        <p class="popup-info"></p>
+        <ul>
+          <li><span class="popup-li-title">Age: </span><span class="popup-age"></span></li>
+          <li><span class="popup-li-title">Inoculations: </span><span class="popup-inoculations"></span></li>
+          <li><span class="popup-li-title">Diseases: </span><span class="popup-diseases"></span>
+          </li>
+          <li><span class="popup-li-title">Parasites: </span><span class="popup-parasites"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/pagination.js"></script>
+</body>
+
+</html>
